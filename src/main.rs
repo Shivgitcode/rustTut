@@ -19,18 +19,33 @@ fn main() {
     // for i in 0..10 {
     //     println!("{}", i);
     // }
-    let a: i32 = 10;
-    let b: i32 = 20;
-    let sum: i32 = do_sum(a, b);
-    let name = String::from("Shivansh");
-    println!("Hello {}", greet(name));
-    println!("Sum of {} and {} is {}", a, b, sum);
+    // let a: i32 = 10;
+    // let b: i32 = 20;
+    // let sum: i32 = do_sum(a, b);
+    // let name = String::from("Shivansh");
+    // println!("Hello {}", greet(name));
+    // println!("Sum of {} and {} is {}", a, b, sum);
+    // let mut x: String = String::from("hi there");
+    // x.push_str("asd");
+    // println!("{}", x);
+    let s1 = String::from("Hello");
+
+    takes_ownership(s1.clone());
+
+    println!("{}", s1);
+
+    // let s2 = s1;
+    // println!("{}", s1);
+    // println!("{}", s2);
 }
 
-fn do_sum(a: i32, b: i32) -> i32 {
-    return a + b;
+fn takes_ownership(some_string: String) {
+    println!("{}", some_string);
 }
+// fn do_sum(a: i32, b: i32) -> i32 {
+//     return a + b;
+// }
 
-fn greet(name: String) -> String {
-    return name;
-}
+// fn greet(name: String) -> String {
+//     return name;
+// }
