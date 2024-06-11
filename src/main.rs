@@ -1,3 +1,21 @@
+struct User {
+    active: bool,
+    username: String,
+    email: String,
+    age: u32,
+}
+
+struct Rect {
+    width: u32,
+    height: u32,
+}
+
+impl Rect {
+    fn area(&self) -> u32 {
+        return self.width * self.height;
+    }
+}
+
 fn main() {
     // let x = -5; //int
     // let y: u32 = 1000; //unsigned int
@@ -33,6 +51,23 @@ fn main() {
     takes_ownership(s1.clone());
 
     println!("{}", s1);
+
+    let name = String::from("Alice");
+    let _user = User {
+        username: name,
+        age: 30,
+        active: true,
+        email: String::from("shivneeraj2004@gmail.com"),
+    };
+
+    let square = Rect {
+        width: 30,
+        height: 40,
+    };
+
+    println!("{} is {} years old", _user.username, _user.age);
+
+    print!("area of square is {}", square.area())
 
     // let s2 = s1;
     // println!("{}", s1);
